@@ -1,0 +1,39 @@
+*{
+    text-align: center;
+    margin: opx;
+    padding: 0px;
+
+
+}
+.pane{
+    background: azure;
+}
+ion-content{
+    margin: 20%;
+    background: white;
+}
+headerBarPresentation{
+    text-align: center;   
+}
+
+.userImg{
+    margin: 10%;
+    border-radius:50%;
+    border:3px solid #000;
+    z-index:5;
+    background:#000;
+}
+.buttons{
+    display: block;
+}
+
+.dadosUser{
+    background: azure;
+}
+.dadosUser label{
+    padding-left: 20%;
+    padding-bottom: 10px;
+    text-align: justify;
+    display: list-item;
+    list-style: none;
+}

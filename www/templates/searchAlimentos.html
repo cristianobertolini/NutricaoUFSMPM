@@ -1,0 +1,34 @@
+<ion-view view-title="SearchAlimentos">    
+    <ion-header-bar class="bar-positive" id="barraSuperior">
+        <div class="buttons">
+            <a class="button icon-left ion-chevron-left button-clear" ng-href="#/"> 
+                voltar
+            </a>
+        </div>
+        <h1 class="title">Pesquisar alimentos</h1>
+        <a class="button" href="#/registerAlimento">
+            ADD
+        </a>
+    </ion-header-bar>
+
+    <ion-content>
+        <label class="item item-input" >
+            <i class="icon ion-search placeholder-icon"></i>
+            <input id="inputPesquisa" type="search" placeholder="Search" ng-keyup="search()" >
+        </label>
+
+        <ion-list>
+            <ion-item ng-repeat="alimento in alimentos track by alimento.id" 
+                      ng-click="details()" class="item-remove-animate" >
+                ID: {{ alimento.id}} <br> Descrição: {{alimento.name}}
+                <li ng-hide="showDetails">Proteina: {{ alimento.proteina}} </li>
+                <li ng-hide="showDetails">Energia: {{alimento.energia}}</li>
+                <li ng-hide="showDetails">Lipideos: {{alimento.lipideos}}</li>
+                <ion-option-button class="button-assertive" ng-click="edit(alimento)">
+                    Edit
+                </ion-option-button>
+            </ion-item >
+
+        </ion-list>
+    </ion-content>
+</ion-view>

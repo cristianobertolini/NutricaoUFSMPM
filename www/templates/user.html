@@ -1,0 +1,54 @@
+<ion-view view-title="User">    
+    <!--Esta tela é o ambiente do usuário
+        - Botão jogar:  direciona para o início do jogo
+        - botão tutorial: direciona para o tutorial do jogo
+        - botão logoff: vai deslogar o usuário e direcionalo para tela de login
+        - botão editar:  direciona para tela de edição de dados do usuário
+        - botão pesquisar: direciona para tela de pesquisa
+    foto de perfil
+    nome
+    idade
+    dados do usuário em geral
+    pontuação
+    -->
+    <ion-header-bar class="bar-positive" id="barraSuperior">
+        <div class="buttons">
+            <a class="button icon-left ion-chevron-left button-clear" id="buttonVoltar" ng-href="#/"> 
+                Logoff
+            </a>
+        </div>
+        <h1 class="title">Usuário</h1>
+        <div class="buttons">
+            <a class="button icon-right icon ion-search" ng-href="#/search"></a>  
+        </div>
+
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="icon">
+            <img src="img/user/teste.png" class="userImg">
+        </div>
+
+        <div ng-repeat="user in users" class="dadosUser">
+            <label>ID: {{ user.id}}</label>    
+            <label>Nome: {{user.name}}</label>    
+            <label>IMC: {{user.imc}}</label>    
+              
+        </div>
+
+        <div class="button">
+            <a class="button button-positive" id="buttonJogar" ng-href="#/game"> 
+                Jogar
+            </a>
+            <a class="button button-positive" id="buttonTutorial" ng-href="#/tutorial"> 
+                Tutorial
+            </a>
+            <button class="button button-positive" id="buttonEditar" ng-click="Edit()"> 
+                Editar
+            </button>
+        </div>
+
+
+    </ion-content>
+
+</ion-view>
